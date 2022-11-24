@@ -1,0 +1,47 @@
+/*bootstrap icons*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+/*font kumbh*/
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 800px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  width:100vw;
+  overflow-x:hidden;
+}
+.navbar-brand{
+    font-size:2rem;
+    font-weight:700;
+}
+.nav-link:hover{
+    color:black;
+    text-decoration:underline;
+}
+.btn-primary, .btn-primary:hover {
+    background-color: #CCADAD;
+    border: 0px;
+    border-radius:0px;
+}
+.primary-color {
+    color: #CCADAD
+}
+.grey-link{
+    color:#777;
+    text-decoration:none;
+}
