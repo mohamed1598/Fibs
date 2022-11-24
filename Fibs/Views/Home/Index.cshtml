@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    input,textarea{
+        background-color: #E3E3E3!important;
+    }
+
+    .image-section{
+        width:99vw;
+        height:75vh;
+        background-image:url('images/images.jpg');
+        background-size:cover;
+        position:absolute;
+        left:0;
+        background-position:50% 50%;
+    }
+</style>
+@* store *@
+<section class="p-5 text-center">
+    <div class="container">
+        <h1>You deserve a comfortable life</h1>
+        <p class="lead my-4">We have made quality our habit. It's not something that we just <br /> strive for - we live by this princible every day.</p>
+        <a class="btn btn-lg btn-primary" asp-area="" asp-controller="Products" asp-action="Index">Our store</a>
+        <div class="row g-3 my-5 mx-3">
+            <img class="col-md-4 img-fluid mt-5" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto/fipsziy7a/agata-create-unsplash-AQEzqWqnVaS3eKx5.jpg" />
+            <img class="col-md-4 img-fluid mb-5" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto/fipsziy7a/daniil-silantev-unsplash-YleXlbbvg6U9PDB9.jpg" />
+            <img class="col-md-4 img-fluid mt-5" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto/fipsziy7a/jean-philippe-delberghe-PVQnaFyePvU-unsplash-mnl08bgoeeHyRV0W.jpg" />
+        </div>
+
+    </div>
+</section>
+@*who we are*@
+<section class="row align-items-center justify-content-between g-5 p-5 my-4">
+    <div class="col-md-4">
+        <p class="lead">WHO WE ARE</p>
+        <h1 class="text-sm-center text-md-start">It's not just furniture - it's our passion</h1>
+    </div>
+    <div class="col-md-6">
+        <p class="lead">We have made quality our habit. It's not something that we just strive for - we live by this priciple every day.</p>
+        <p class="lead">While most of the things about the creative process will be forgotten, the excellence of our products and services will be remembered.</p>
+    </div>
+</section>
+@*OUR CREDO*@
+<section class="row align-items-center justify-content-between g-5 p-5 my-4">
+    <div class="col-md-6">
+        <p class="lead">OUR CREDO</p>
+        <h1 class="text-sm-center text-md-start">Comfort <br />Beauty <br />Versatility</h1>
+        <p class="lead">We have made quality our habit. It's not something that we just strive for - we live by this priciple every day.</p>
+    </div>
+    <div class="col-md-6">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto/fipsziy7a/pexels-element-digital-m2WybgeZovtEvZ9K.jpg" width="100%"/>
+    </div>
+</section>
+@*contacts*@
+<section class="row align-items-start justify-content-between g-5 p-5 my-4">
+    <div class="col-md-6 p-3">
+        <h1 class="text-sm-center text-md-start">Have a question?</h1>
+        <p class="lead">Left your e-mail and we will contact you soon.</p>
+    </div>
+    <div class="col-md-6">
+        <form>
+            <div class="form-group my-3">
+                <label class="control-label">Name*</label>
+                <input class="form-control" placeholder="Your name" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <label class="control-label">Last Name</label>
+                <input class="form-control" placeholder="Your last name" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <label class="control-label">Your email*</label>
+                <input class="form-control" placeholder="example.mail.com" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <label class="control-label">Message*</label>
+                <textarea class="form-control" placeholder="Enter your message" ></textarea>
+                <span class="text-danger"></span>
+            </div>
+            <button class="btn btn-primary btn-lg px-4">Contact Me</button>
+        </form>
+    </div>
+</section>
+@*image*@
+<section class="container-fluid image-section"></section>
+<section style="height:75vh;width:80vw"></section>

@@ -1,0 +1,50 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Profile";
+    ViewData["ActivePage"] = ManageNavPages.Index;
+}
+
+<h3>@ViewData["Title"]</h3>
+<partial name="_StatusMessage" for="StatusMessage" />
+<div class="row">
+    <div class="col-md-6">
+        <form id="profile-form" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating my-4">
+                <input asp-for="Username" class="form-control" disabled />
+                <label asp-for="Username" class="form-label"></label>
+            </div>
+            <div class="form-floating my-4">
+                <input asp-for="Input.FullName" class="form-control" />
+                <label asp-for="Input.FullName" class="form-label"></label>
+            </div>
+            <div class="form-floating my-4">
+                <input asp-for="Input.PhoneNumber" class="form-control" />
+                <label asp-for="Input.PhoneNumber" class="form-label"></label>
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <label class="control-label">Profile Picture</label>
+                <input type="file"
+                       accept="image/*"
+                       asp-for="Input.Picture"
+                       onchange="document.getElementById('user-image').src=window.URL.createObjectURL(this.files[0])"
+                       class="form-control" placeholder="Picture" />
+            </div>
+            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+        </form>
+    </div>
+    <div class="col-md-5">
+        @{
+            if(Model.Input.Picture!=null){
+                <img id="user-image" src='data:image/*;base64,@Convert.ToBase64String(Model.Input.Picture)' width="95%" />
+            }
+        }
+        
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

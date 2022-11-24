@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Fibs.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    .card {
+        border: 0px;
+        cursor:pointer;
+    }
+
+    .product-img {
+        height: 270px;
+        background-size: 100% 100%;
+        background-position: 50% 50%;
+    }
+    .product-img .hover{
+        height:100%;
+        display:none!important;
+    }
+    .product-img:hover .hover {
+        display:flex!important;
+        width: 100%;
+        background-color: white;
+        opacity: 0.7;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .btn-light,.btn-light:hover{
+        border:1px solid #333;
+    }
+</style>
+@* Product intro section*@
+<section class="row align-items-center justify-content-between g-5 p-5">
+    <div class="col-md-4">
+        <p class="lead">IT'S EASY</p>
+        <h1 class="text-sm-center text-md-start">Create Your space with our furniture</h1>
+    </div>
+    <div class="col-md-6">
+        <p class="lead">We have made quality our habit. It's not something that we just strive for - we live by this priciple every day.</p>
+        <p class="lead">While most of the things about the creative process will be forgotten, the excellence of our products and services will be remembered.</p>
+    </div>
+</section>
+@if (User.IsInRole("Admin")){
+    <p>
+        <a asp-action="Create" class="btn btn-lg btn-primary mb-5">Create New</a>
+    </p>
+}
+@*Poducts List*@
+<div class="row align-items-center justify-content-md-start justify-content-sm-center g-4">
+    @foreach (var item in Model)
+    {
+        <div class="card col-lg-3 col-md-4 col-sm-6 col-10 position-realtive"
+         onclick="window.location.href=window.location.href.concat('/Details/@item.Id')">
+            <div class="product-img position-relative"
+            style="background-image:url('data:image/*;base64,@Convert.ToBase64String(item.Picture)'">
+                <div class="hover flex-column align-items-center justify-content-center p-5">
+                    <a class="btn btn-light" asp-controller="ShoppingBag" asp-action="Add" asp-route-Id=@item.Id asp-route-ControllerName="Products">Add To Bag</a>
+                    <div class="d-flex align-items-center justify-content-center m-3">
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <a class="btn btn-warning m-2" asp-controller="Products" asp-action="Edit" asp-route-Id=@item.Id>Edit</a>
+                            <a class="btn btn-danger m-2" asp-controller="Products" asp-action="Delete" asp-route-Id=@item.Id>Delete</a>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="fw-bold">@item.Name</p>
+                <p class="lead">$ @item.Price</p>
+            </div>
+        </div>
+    }
+</div>

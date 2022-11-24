@@ -1,0 +1,65 @@
+﻿@model Fibs.Models.Product
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="text-center">Edit Product</h1>
+<div class="row align-items-center justify-content-between">
+    <div class="col-md-5 g-3">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group my-3">
+                <input asp-for="Name" class="form-control" placeholder="Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <input asp-for="Price" class="form-control" placeholder="Price" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <input asp-for="Size" class="form-control" placeholder="Size" />
+                <span asp-validation-for="Size" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <input asp-for="NoOfPieces" class="form-control" placeholder="NoOfPieces" />
+                <span asp-validation-for="NoOfPieces" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <input asp-for="Material" class="form-control" placeholder="Material" />
+                <span asp-validation-for="Material" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <input asp-for="Details" class="form-control" placeholder="Details" />
+                <span asp-validation-for="Details" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3" hidden>
+                <input asp-for="FavoritesNo" class="form-control" placeholder="FavoritesNo" value="0" />
+                <span asp-validation-for="FavoritesNo" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <label class="control-label" asp-for="Picture"></label>
+                <input type="file"
+                       accept="image/*"
+                       value="Model.Picture"
+                       asp-for="Picture"
+                       onchange="document.getElementById('product-image').src=window.URL.createObjectURL(this.files[0])"
+                       class="form-control" placeholder="Picture" />
+                <span asp-validation-for="Picture" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <input type="submit" value="Edit" class="btn btn-primary form-control" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-5 img-fluid">
+        <img id="product-image" width="95%" src='data:image/*;base64,@Convert.ToBase64String(Model.Picture)' />
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

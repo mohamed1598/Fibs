@@ -1,0 +1,12 @@
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.IOC\bin\Debug\net6.0\Fibs.IOC.deps.json
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.IOC\bin\Debug\net6.0\Fibs.IOC.dll
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.IOC\bin\Debug\net6.0\Fibs.IOC.pdb
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.IOC\obj\Debug\net6.0\Fibs.IOC.csproj.AssemblyReference.cache
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.IOC\obj\Debug\net6.0\Fibs.IOC.GeneratedMSBuildEditorConfig.editorconfig
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.IOC\obj\Debug\net6.0\Fibs.IOC.AssemblyInfoInputs.cache
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.IOC\obj\Debug\net6.0\Fibs.IOC.AssemblyInfo.cs
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.IOC\obj\Debug\net6.0\Fibs.IOC.csproj.CoreCompileInputs.cache
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.IOC\obj\Debug\net6.0\Fibs.IOC.dll
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.IOC\obj\Debug\net6.0\refint\Fibs.IOC.dll
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.IOC\obj\Debug\net6.0\Fibs.IOC.pdb
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.IOC\obj\Debug\net6.0\ref\Fibs.IOC.dll

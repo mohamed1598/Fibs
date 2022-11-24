@@ -1,0 +1,15 @@
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\bin\Release\net6.0\Fibs.DataAccess.deps.json
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\bin\Release\net6.0\Fibs.DataAccess.dll
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\bin\Release\net6.0\Fibs.DataAccess.pdb
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\bin\Release\net6.0\Fibs.Models.dll
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\bin\Release\net6.0\Fibs.Models.pdb
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\obj\Release\net6.0\Fibs.DataAccess.csproj.AssemblyReference.cache
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\obj\Release\net6.0\Fibs.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\obj\Release\net6.0\Fibs.DataAccess.AssemblyInfoInputs.cache
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\obj\Release\net6.0\Fibs.DataAccess.AssemblyInfo.cs
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\obj\Release\net6.0\Fibs.DataAccess.csproj.CoreCompileInputs.cache
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\obj\Release\net6.0\Fibs.DataAccess.csproj.CopyComplete
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\obj\Release\net6.0\Fibs.DataAccess.dll
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\obj\Release\net6.0\refint\Fibs.DataAccess.dll
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\obj\Release\net6.0\Fibs.DataAccess.pdb
+D:\tasks\csharp\.NET CORE\MVC\Fibs\Fibs.DataAccess\obj\Release\net6.0\ref\Fibs.DataAccess.dll

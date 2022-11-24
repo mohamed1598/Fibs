@@ -1,0 +1,78 @@
+﻿@model List<Fibs.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    .card {
+        border: 0px;
+        cursor: pointer;
+    }
+
+    .product-img {
+        height: 270px;
+        background-size: 100% 100%;
+        background-position: 50% 50%;
+    }
+
+        .product-img .hover {
+            height: 100%;
+            display: none !important;
+        }
+
+        .product-img:hover .hover {
+            display: flex !important;
+            width: 100%;
+            background-color: white;
+            opacity: 0.7;
+        }
+
+    p {
+        margin: 0;
+    }
+
+    .btn-light, .btn-light:hover {
+        border: 1px solid #333;
+    }
+</style>
+@*Favorites List*@
+
+<h2 style="font-weight:500">My Favorites</h2>
+<p class="lead">
+    <a asp-controller="Products" asp-action="Index" class="grey-link">Store</a> / 
+    <a asp-controller="FavoriteProduct" asp-action="Index" class="grey-link">Favorites</a>
+</p>
+@if (Model.Count == 0)
+{
+    <h4 class="my-5">
+        you don't have any favorites yet go to
+        <a asp-controller="Products" asp-action="Index">Store</a>
+        and make some Favorites
+    </h4>
+}
+<div class="row align-items-center justify-content-md-start justify-content-sm-center g-4">
+    @foreach (var item in Model)
+    {
+        <div class="card col-lg-3 col-md-4 col-sm-6 col-10 position-realtive"
+         onclick="window.location.href=window.location.origin.concat('/Products/Details/@item.Id')">
+            <div class="product-img position-relative"
+             style="background-image:url('data:image/*;base64,@Convert.ToBase64String(item.Picture)'">
+                <div class="hover flex-column align-items-center justify-content-center p-5">
+                    <a class="btn btn-light" asp-controller="ShoppingBag" asp-action="Add" asp-route-Id=@item.Id asp-route-ControllerName="FavoriteProduct">Add To Bag</a>
+                    <div class="d-flex align-items-center justify-content-center m-3">
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <a class="btn btn-warning m-2" asp-controller="Products" asp-action="Edit" asp-route-Id=@item.Id>Edit</a>
+                            <a class="btn btn-danger m-2" asp-controller="Products" asp-action="Delete" asp-route-Id=@item.Id>Delete</a>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="fw-bold">@item.Name</p>
+                <p class="lead">$ @item.Price</p>
+            </div>
+        </div>
+    }
+</div>
+

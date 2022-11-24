@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Fibs</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @*<link rel="stylesheet" href="~/Fibs.styles.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="container">
+        <nav class ="navbar navbar-expand-md bg-light navbar-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Fibs</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navmenu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Products" asp-action="Index">Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="CustomerCare">Customer Care</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="FavoriteProduct" asp-action="Index">
+                                <i class="bi bi-heart"></i>
+                                Favorites
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="ShoppingBag" asp-action="Index"><i class="bi bi-bag-check"></i> Shopping bag</a>
+                        </li>
+                        <partial name="_LoginPartial" />
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="p-5"></div>
+    <div class="container mt-5">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top row container ">
+        <div class="row p-3 mb-5">
+            <div class="col-md-4 my-4">
+                <h4>Address</h4>
+                <p class="lead">3721 Single Street <br />Quincy,MA 02169</p>
+                <div>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter mx-5"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+            <div class="col-md-4 my-4">
+                <h4>Contacts</h4>
+                <p class="lead">123-456-7890 <br />info@fips.com</p>
+            </div>
+            <div class="col-md-4 my-4">
+                <h4>Subscribe to our newsletter</h4>
+                <form>
+                    <div class="form-group my-3">
+                        <label class="control-label">Your email*</label>
+                        <input class="form-control" placeholder="example.mail.com" />
+                        <span class="text-danger"></span>
+                    </div>
+                    <button class="btn btn-primary btn-lg px-4">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,104 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Customer Care";
+}
+<style>
+    .pictureSection{
+        color:whitesmoke;
+        width: 99vw;
+        height: 100vh;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top:-25vh;
+        background-position: 50% 50%;
+        background-image: linear-gradient( rgba(50,50,50,0.6), rgba(50,50,50,0.6)),url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/amazon-rivet-furniture-1533048038.jpg?crop=1.00xw:0.502xh');
+    }
+</style>
+<section class="pictureSection d-flex align-items-center justify-content-center pt-5">
+    <h1 class="mt-5">Have questions?</h1>
+</section>
+<section style="height:75vh;width:100vw"></section>
+@*shipping and returns*@
+<section class="mt-5">
+    <h3>Shipping & Returns</h3>
+    <p>
+        We are team of four designers and two animators. We are passionate about our craft. We are passionate about what we do. And we believe that work should be fun and creative. We are a team of four experienced interior designers, animators and visualizers. What makes us different? We are passionate about design. We are passionate about what we do. And we believe that work should be creative. We are a team of four experienced interior designers, animators and visualizers.
+
+    </p>
+</section>
+<!-- question Accordion -->
+<section id="question" class="p-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion" id="questions">
+            <!-- item 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#question-one">
+                        Who we are?
+                    </button>
+                </h2>
+                <div id="question-one" class="accordion-collapse collapse show" data-bs-parent="#questions">
+                    <div class="accordion-body">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quaerat aperiam cupiditate aliquam distinctio sint eum aspernatur enim rerum dolorum temporibus repellendus officia id reprehenderit vel dolore veritatis sequi, molestiae doloremque quisquam non quos cumque. Nesciunt illum facilis illo tempora saepe asperiores a, ducimus accusamus, laudantium ab optio pariatur culpa?
+                    </div>
+                </div>
+            </div>
+            <!-- item 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-two">
+                        Who we are?
+                    </button>
+                </h2>
+                <div id="question-two" class="accordion-collapse collapse" data-bs-parent="#questions">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iste tempore, quibusdam ex inventore corporis nam fugit blanditiis dolores sunt at illo dolorem, quam ut? Ipsa distinctio modi soluta facere eius perferendis cupiditate nam quis laboriosam at, animi quae earum. Deleniti deserunt quod, ad blanditiis libero omnis nostrum repudiandae doloremque.
+                    </div>
+                </div>
+            </div>
+            <!-- item3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-three">
+                        Who we are?
+                    </button>
+                </h2>
+                <div id="question-three" class="accordion-collapse collapse" data-bs-parent="#questions">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta officia eum delectus similique possimus sunt repudiandae suscipit ea architecto et consequuntur, rem dolore nihil repellat omnis minus nesciunt, velit ut quae laboriosam aperiam explicabo aliquam. Error impedit quaerat, necessitatibus et libero cum minima nemo placeat, perferendis modi asperiores recusandae. Quos.
+                    </div>
+                </div>
+            </div>
+            <!-- item4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-Four">
+                        Who we are?
+                    </button>
+                </h2>
+                <div id="question-Four" class="accordion-collapse collapse" data-bs-parent="#questions">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta officia eum delectus similique possimus sunt repudiandae suscipit ea architecto et consequuntur, rem dolore nihil repellat omnis minus nesciunt, velit ut quae laboriosam aperiam explicabo aliquam. Error impedit quaerat, necessitatibus et libero cum minima nemo placeat, perferendis modi asperiores recusandae. Quos.
+                    </div>
+                </div>
+            </div>
+            <!-- item5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-five">
+                        Who we are?
+                    </button>
+                </h2>
+                <div id="question-five" class="accordion-collapse collapse" data-bs-parent="#questions">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta officia eum delectus similique possimus sunt repudiandae suscipit ea architecto et consequuntur, rem dolore nihil repellat omnis minus nesciunt, velit ut quae laboriosam aperiam explicabo aliquam. Error impedit quaerat, necessitatibus et libero cum minima nemo placeat, perferendis modi asperiores recusandae. Quos.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

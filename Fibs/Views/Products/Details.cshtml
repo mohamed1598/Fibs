@@ -1,0 +1,68 @@
+﻿@model Fibs.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+<style>
+    .Details *{
+        font-size:1.2rem;
+    }
+    h3{
+        font-size:1.8rem!important;
+        font-weight:700;
+    }
+    h4{
+        font-size:1.4rem;
+        font-weight:600;
+    }
+</style>
+<section class="row align-items-start justify-content-between g-4 Details">
+    <img class="col-md-7" src='data:image/*;base64,@Convert.ToBase64String(Model.Picture)' />
+    <div class="col-md-4">
+        <div class="my-3">
+            <h3>@Model.Name</h3>
+        </div>
+        <div class="my-3">
+            <h4>$ @Model.Price</h4>
+        </div>
+        <div class="my-3">
+            <h4 class="my-3">Size</h4>
+            <p class="lead">
+                <input type="radio" />
+                @Model.Size
+            </p>
+        </div>
+        <div class="my-3">
+            <h5>In stock: @Model.NoOfPieces</h5>
+        </div>
+        <div class="my-3">
+            <a class="btn btn-lg btn-dark w-100 text-center my-3" 
+            asp-controller="ShoppingBag" asp-action="Add" asp-route-Id=@Model.Id asp-route-ControllerName="Products">Add to bag</a>
+        </div>
+        <div class="my-3">
+            <h4>Details</h4>
+            <p class="lead">@Model.Details</p>
+        </div>
+        <div class="my-3">
+            <h4>Material</h4>
+            <p class="lead">@Model.Material</p>
+        </div>
+        <div class="my-3">
+            <h4>Save this product for later</h4>
+            @{
+                if ((bool)ViewData["isFavorite"])
+                {
+                    <a asp-controller="FavoriteProduct" asp-action="AddToFavorites" asp-route-Id=@Model.Id class="btn btn-lg border-dark"><i class="bi bi-heart-fill text-danger"></i> Favorited</a>
+                    <a asp-controller="FavoriteProduct" asp-action="Index" class="btn btn-lg border-dark">View Favorites</a>
+                }
+                else
+                {
+                    <a asp-controller="FavoriteProduct" asp-action="AddToFavorites" asp-route-Id=@Model.Id class="btn btn-lg btn-light border-dark"><i class="bi bi-heart"></i> Favorite</a>
+                }
+            }
+        </div>
+        
+       
+       
+    </div>
+</section>

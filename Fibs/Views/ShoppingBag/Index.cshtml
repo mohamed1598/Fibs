@@ -1,0 +1,66 @@
+﻿@model List<Fibs.Models.ShoppingBag>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    .btn-light, .btn-light:hover {
+        border: 1px solid #333;
+    }
+</style>
+<section class="row g-4 p-5">
+    @* Shopping cart section*@
+    <section class="col-md-5">
+        <h1 style="font-weight:500">Shopping Cart</h1>
+        <p class="lead m-0">
+            <a asp-controller="Products" asp-action="Index" class="grey-link">Store</a> /
+            <a asp-controller="ShoppingBag" asp-action="Index" class="grey-link">Shopping Cart</a>
+        </p>
+        @foreach(var bag in Model){
+            <div class="product row my-4 align-items-center" style="font-weight:500">
+                <img src="data:image/*;base64,@Convert.ToBase64String(bag.Product.Picture)" class="col-4">
+                <div class="col-8">
+                    <div class="d-flex justify-content-between">
+                        <h5 style="font-weight:600">@bag.Product.Name</h5>
+                        <a asp-controller="ShoppingBag" asp-action="Delete" asp-route-Id="@bag.Id" class="grey-link"><i class="bi bi-x text-grey"></i></a>
+                    </div>
+                    <p class="grey-link">Size: @bag.Product.Size</p>
+                    
+                        <form asp-action="ChangeQuantity" method="post">
+                            <div class="d-flex justify-content-between">
+                                <p>
+                                    Qty:
+                                    <input name="Count" type="number" class="form-control w-50 d-inline-block" value=@bag.count min="0">
+                                </p>
+                                <p>$@bag.Product.Price</p>
+                            </div>
+                            <input type="hidden" name="Id" value=@bag.Id class="form-control" placeholder="Count" />
+                            <div class="form-group my-3">
+                                <input type="submit" class="btn btn-primary form-control" />
+                            </div>
+                    </form>
+                </div>
+            </div>
+        }
+
+        <hr />
+        <div class="d-flex justify-content-between my-5">
+            <h2 style="font-weight:500">Total</h2>
+            <h2 style="font-weight:500">$@Model.Sum(m=>m.Product.Price*m.count)</h2>
+        </div>
+    </section>
+    <section class="col-md-7 p-5">
+        <h1 style="font-weight:500" class="mt-5">Checkout</h1>
+        <p class="lead mb-5">Enter your full address. This address will be used to send your order to you</p>
+        <div class="form-group my-3">
+            <input type="text" placeholder="Your Full Address" class="form-control p-3" />
+        </div>
+        <div class="form-group my-3">
+            <a asp-action="Checkout" class="btn btn-dark form-control p-3">Checkout</a>
+        </div>
+        <p>Looking for More? 
+            <a asp-action="Index" asp-controller="Products">Continue Shopping</a>
+        </p>
+    </section>
+</section>
+
